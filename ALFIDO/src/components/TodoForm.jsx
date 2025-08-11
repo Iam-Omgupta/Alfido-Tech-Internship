@@ -6,7 +6,7 @@ function TodoForm({ addTodo }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!value.trim()) return;
-    addTodo(value.trim());
+    addTodo(value);
     setValue("");
   };
 
@@ -14,14 +14,14 @@ function TodoForm({ addTodo }) {
     <form onSubmit={handleSubmit} className="flex gap-2 mb-6">
       <input
         type="text"
-        className="flex-grow p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg"
+        className="flex-grow p-3 border border-gray-300 rounded-md"
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder="Add a new task..."
       />
       <button
         type="submit"
-        className="px-5 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors duration-200 text-lg"
+        className="px-5 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
       >
         Add
       </button>

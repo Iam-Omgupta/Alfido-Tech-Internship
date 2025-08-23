@@ -17,10 +17,12 @@ function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // ✅ Added Fetch API here as a normal nav link
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
+    { name: "Fetch API", path: "/fetchapi" },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -29,12 +31,12 @@ function Navbar() {
     <nav className="bg-purple-700 shadow-md">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo / Name on right */}
+          {/* Logo */}
           <div className="flex-shrink-0 text-white font-bold text-xl order-2 sm:order-1">
             Om Gupta
           </div>
 
-          {/* Hamburger for mobile */}
+          {/* Mobile Hamburger */}
           <div className="sm:hidden order-3">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -51,7 +53,6 @@ function Navbar() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -67,7 +68,6 @@ function Navbar() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -80,7 +80,7 @@ function Navbar() {
             </button>
           </div>
 
-          {/* Nav Links (desktop) */}
+          {/* Desktop Menu */}
           <div className="hidden sm:flex space-x-6 order-1 sm:order-2 items-center">
             {navItems.map((item) => (
               <Link
@@ -112,7 +112,6 @@ function Navbar() {
                     stroke="currentColor"
                     strokeWidth="2"
                     viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       strokeLinecap="round"
@@ -154,7 +153,7 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="sm:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1">
@@ -173,7 +172,7 @@ function Navbar() {
               </Link>
             ))}
 
-            {/* Tasks section in mobile */}
+            {/* Mobile dropdown for tasks */}
             <div className="border-t border-purple-500 mt-1 pt-2">
               <div className="px-3 py-2 text-white font-semibold">Tasks</div>
               <Link

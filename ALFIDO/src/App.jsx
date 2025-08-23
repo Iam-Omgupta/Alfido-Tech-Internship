@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Counter from "./pages/Counter";
 import Todo from "./pages/Todo";
+import FetchAPI from "./Pages/FetchAPI";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/todo" element={<Todo />} />
+          <Route path="/fetchapi" element={<FetchAPI />} />
         </Routes>
       </main>
     </Router>

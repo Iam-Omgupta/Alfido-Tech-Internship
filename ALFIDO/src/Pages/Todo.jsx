@@ -3,13 +3,13 @@ import TodoForm from "../components/TodoForm";
 import TodoItem from "../components/TodoItem";
 
 function Todo() {
-  // Load todos from localStorage or start with empty array
+
   const [todos, setTodos] = useState(() => {
     const saved = localStorage.getItem("todos");
     return saved ? JSON.parse(saved) : [];
   });
 
-  // Save todos to localStorage whenever they change
+
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);

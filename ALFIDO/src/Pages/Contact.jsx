@@ -6,7 +6,7 @@ function Contact() {
       <h2 className="text-3xl font-bold text-blue-600 mb-8">Get In Touch</h2>
       <div className="flex flex-col sm:flex-row justify-center gap-6">
         <a
-          href="https://linkedin.com/in/your-linkedin"
+          href="https://www.linkedin.com/in/om-gupta22/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 bg-blue-600 text-white py-3 rounded shadow-md hover:bg-blue-700 transition"
@@ -14,7 +14,7 @@ function Contact() {
           LinkedIn Profile
         </a>
         <a
-          href="https://github.com/your-github"
+          href="https://github.com/Iam-Omgupta/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 bg-gray-800 text-white py-3 rounded shadow-md hover:bg-gray-900 transition"
